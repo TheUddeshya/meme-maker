@@ -1,0 +1,226 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  max-height: 100%;
+  /* outline: 2px solid red; */
+  overflow: hidden;
+}
+
+.header {
+  font-size: 2rem;
+  font-weight: bold;
+  height: 10%;
+  padding: 1rem;
+  /* text-transform: uppercase; */
+  color: white;
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  /* background:  #51718C ; */
+}
+
+.header span {
+  margin-right: 1rem;
+  color: bisque;
+}
+main {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr 1fr;
+  max-height: 90vh;
+  box-sizing: content-box;
+  border-bottom: 4rem solid #51718c;
+  /* outline: 15px solid green; */
+}
+
+.sidebar {
+  /* outline: 1px solid red; */
+  height: 90vh;
+  padding-inline: 10px;
+  overflow: auto;
+  background-color: lightgray;
+}
+
+.inputs {
+  /* outline: 2px solid red; */
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 90vh;
+  /* min-height: 90vh; */
+  overflow: scroll;
+}
+
+.thumbnail {
+  width: 100%;
+  max-width: 200px;
+  margin-top: 1.3rem;
+  display: block;
+  margin-inline: auto;
+  border: 2px solid black;
+  border-radius: 7px;
+}
+
+.img-container {
+  height: 90vh;
+  padding: 2rem 0 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* overflow: hidden; */
+}
+
+.text-container {
+  display: inline-block;
+}
+
+.current-meme,
+.text-container {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.text-container {
+  outline: 2px solid black;
+  position: relative;
+}
+
+.meme-text {
+  /* position: absolute; */
+  /* width: 80%; */
+  /* text-align: center; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  /* margin: 15px 0; */
+  /* padding: 0 5px; */
+  font-family: impact, sans-serif;
+  /* font-size: 2em; */
+  text-transform: uppercase;
+  color: white;
+  /* letter-spacing: 1px; */
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+.meme-text:active,
+.meme-text:hover {
+  /* box-sizing: content-box; */
+  outline: 2px dashed black;
+}
+
+.memeInput,
+.download {
+  display: block;
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+  /* margin-bottom: 1.5rem; */
+  margin-inline: auto;
+  width: 80%;
+  border-radius: 5px;
+  border: 2px solid #aaa;
+  max-width: 350px;
+  font-size: 1rem;
+  text-indent: 5px;
+}
+
+.download {
+  width: auto;
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 0;
+}
+
+button:active {
+  box-shadow: inset 5px 3px 5px darkslateblue;
+}
+
+.input-container {
+  /* border: 2px solid red; */
+  padding-inline: 2rem;
+  /* text-align: left; */
+}
+
+.memeInput {
+  display: inline-block;
+  text-align: left;
+  /* min-width: 200px; */
+  /* margin-right: 2rem; */
+}
+
+.size-container {
+  display: inline-block;
+  margin-top: 1rem;
+  /* margin-left: 2rem; */
+  margin: 1rem 2rem 0 2rem;
+  outline: 2px solid #aaa;
+  border-radius: 4px;
+}
+
+.sizeInput,
+.sizeBut {
+  display: inline-block;
+  border: 0;
+  width: 2rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.sizeInput {
+  width: 2.5rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.memeInput:active,
+.memeInput:focus {
+  /* border-color: purple; */
+  outline-color: purple;
+}
+
+.sizeBut {
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  /* outline: 2px solid b */
+  /* font-size: 3rem; */
+}
+
+/* .split {
+  display: flex;
+  flex-direction: row;
+}
+
+.gutter {
+  background-color: #eee;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==");
+  cursor: col-resize;
+} */
